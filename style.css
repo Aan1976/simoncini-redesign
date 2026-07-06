@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   background: var(--ivory);
@@ -331,23 +335,17 @@ p {
 }
 
 .silence-inner {
-  max-width: 980px;
+  width: min(92vw, 980px);
+  margin: 0 auto;
   text-align: center;
 }
 
-.silence-inner span {
-  display: block;
-  margin-bottom: 3rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.32em;
-  color: var(--gold);
-}
-
 .silence p {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 980px;
   font-family: var(--serif);
-  font-size: clamp(3rem, 7vw, 8rem);
-  line-height: 0.95;
+  font-size: clamp(2.6rem, 5.8vw, 6.4rem);
+  line-height: 1;
   letter-spacing: -0.035em;
   color: var(--charcoal);
 }
