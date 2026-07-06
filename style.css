@@ -232,19 +232,23 @@ p {
 
 .floating-nav {
   position: fixed;
-  top: 24px;
+  top: 28px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  width: calc(100% - 48px);
-  max-width: 1180px;
+  width: min(92%, 1180px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
-  background: rgba(248, 244, 237, 0.72);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(216, 208, 195, 0.7);
+  padding: 14px 22px;
+  background: rgba(245, 239, 230, 0.58);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(245, 239, 230, 0.22);
+  border-radius: 999px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
 .floating-nav a {
