@@ -366,34 +366,70 @@ p {
 
 /* Scene 5 — Art */
 
+/* Scene 5 — Living Gallery */
+
 .art {
+  min-height: 135vh;
   background: var(--charcoal);
   color: var(--warm-white);
+  padding: 8vw;
   overflow: hidden;
 }
 
-.art-heading {
-  max-width: 900px;
-  margin-bottom: 8vw;
+.art-intro {
+  max-width: 980px;
+  margin-bottom: 7vw;
 }
 
-.art-composition {
+.art-intro span {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  color: var(--gold);
+}
+
+.art-intro h2 {
+  max-width: 980px;
+  font-size: clamp(3.4rem, 7vw, 8rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.art-stage {
   position: relative;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
-.art-large {
-  width: 66%;
-  height: 72vh;
+.art-image-main {
+  width: 68%;
+  height: 76vh;
+  overflow: hidden;
 }
 
-.art-small {
+.art-image-main img {
+  filter: brightness(0.88) contrast(1.06);
+}
+
+.art-image-floating {
   position: absolute;
   right: 0;
-  bottom: -8vh;
-  width: 32%;
-  height: 46vh;
+  top: 22vh;
+  width: 36%;
+  height: 52vh;
   border: 18px solid var(--charcoal);
+  overflow: hidden;
+}
+
+.art-note {
+  position: absolute;
+  right: 4vw;
+  bottom: 0;
+  max-width: 360px;
+}
+
+.art-note p {
+  color: rgba(255, 250, 243, 0.68);
 }
 
 /* Scene 6 */
