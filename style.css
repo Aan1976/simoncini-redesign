@@ -466,15 +466,67 @@ p {
 
 /* Scene 6 */
 
-.city-intro {
+/* Scene 6 — Luxembourg Unfolds */
+
+.city {
   background: var(--warm-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 8vw;
+}
+
+.city-intro {
+  max-width: 1080px;
+  margin-bottom: 6vw;
+}
+
+.city-intro span {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  color: var(--gold);
 }
 
 .city-intro h2 {
-  max-width: 1050px;
+  max-width: 1080px;
+  font-size: clamp(3.4rem, 7vw, 8rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.city-photo {
+  height: 76vh;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.12);
+  margin-bottom: 6vw;
+}
+
+.city-photo img {
+  filter: brightness(0.96) contrast(1.04);
+}
+
+.walking-list {
+  border-top: 1px solid var(--stone);
+}
+
+.walking-list article {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3vw;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--stone);
+}
+
+.walking-list span {
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.walking-list h3 {
+  font-size: clamp(2rem, 4vw, 4.4rem);
+  line-height: 1;
 }
 
 /* Scene 7 */
