@@ -184,9 +184,25 @@ p {
   88%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-@keyframes arrivalScroll {
-  0%, 86% { opacity: 0; transform: translateX(-50%) translateY(-8px); }
-  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+@keyframes arrivalFinal {
+  0%, 62% {
+    opacity: 0;
+    filter: blur(18px);
+    transform: translateX(-50%) translateY(34px) scale(0.94);
+    letter-spacing: 0.28em;
+  }
+
+  78% {
+    opacity: 0.35;
+    filter: blur(8px);
+  }
+
+  92%, 100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(-50%) translateY(0) scale(1);
+    letter-spacing: 0.18em;
+  }
 }
 
 /* Scene 2 */
