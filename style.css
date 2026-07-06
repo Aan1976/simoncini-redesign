@@ -223,10 +223,12 @@ p {
 }
 
 .hero-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: 65% center;
-  transform: scale(1.01);
-  filter: brightness(0.78) contrast(1.05);
+  object-position: center center;
+  transform: none;
+  filter: brightness(0.86) contrast(1.03);
 }
 
 .hero-image::after {
