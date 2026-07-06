@@ -502,7 +502,8 @@ p {
 }
 
 .city-photo img {
-  filter: brightness(0.96) contrast(1.04);
+  object-fit: contain;
+  background: #111;
 }
 
 .walking-list {
