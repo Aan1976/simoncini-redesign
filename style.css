@@ -39,38 +39,6 @@ img {
   display: block;
 }
 
-/* Premium image treatment */
-
-.story-image,
-.room-visual,
-.art-image-main,
-.art-image-floating,
-.morning-image {
-  border-radius: 36px;
-  overflow: hidden;
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.10);
-}
-
-.art-image-floating {
-  border: 14px solid var(--charcoal);
-}
-
-.story-image img,
-.room-visual img,
-.art-image-main img,
-.art-image-floating img,
-.morning-image img {
-  transition: transform 0.8s ease, filter 0.8s ease;
-}
-
-.story-image:hover img,
-.room-visual:hover img,
-.art-image-main:hover img,
-.art-image-floating:hover img,
-.morning-image:hover img {
-  transform: scale(1.025);
-}
-
 /* Global */
 
 .scene {
@@ -97,15 +65,50 @@ h3 {
   margin: 0;
 }
 
-h2 {
-  font-size: clamp(3rem, 7vw, 8rem);
-  letter-spacing: -0.04em;
-}
-
 p {
   font-size: clamp(1rem, 1.35vw, 1.16rem);
   line-height: 1.75;
   color: var(--muted);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--charcoal);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.35rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Premium image treatment */
+
+.story-image,
+.art-image-main,
+.art-image-floating,
+.stay-image,
+.morning-image {
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.10);
+}
+
+.story-image img,
+.art-image-main img,
+.art-image-floating img,
+.stay-image img,
+.morning-image img {
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.story-image:hover img,
+.art-image-main:hover img,
+.art-image-floating:hover img,
+.stay-image:hover img,
+.morning-image:hover img {
+  transform: scale(1.025);
 }
 
 /* Scene 1 — Arrival */
@@ -241,7 +244,7 @@ p {
 
 .floating-nav nav {
   display: flex;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 
 .brand {
@@ -366,7 +369,6 @@ p {
 
 .story-image {
   height: 74vh;
-  overflow: hidden;
 }
 
 .story-image img {
@@ -377,9 +379,14 @@ p {
   max-width: 560px;
 }
 
-.story-text span {
+.story-text span,
+.art-intro span,
+.city-intro span,
+.stay-copy span,
+.morning-copy span,
+.guide-heading span {
   display: block;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.2rem;
   font-size: 0.72rem;
   letter-spacing: 0.32em;
   color: var(--gold);
@@ -396,8 +403,6 @@ p {
   max-width: 460px;
 }
 
-/* Scene 5 — Art */
-
 /* Scene 5 — Living Gallery */
 
 .art {
@@ -411,14 +416,6 @@ p {
 .art-intro {
   max-width: 980px;
   margin-bottom: 7vw;
-}
-
-.art-intro span {
-  display: block;
-  margin-bottom: 2.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.32em;
-  color: var(--gold);
 }
 
 .art-intro h2 {
@@ -436,7 +433,6 @@ p {
 .art-image-main {
   width: 68%;
   height: 76vh;
-  overflow: hidden;
 }
 
 .art-image-main img {
@@ -449,8 +445,7 @@ p {
   top: 22vh;
   width: 36%;
   height: 52vh;
-  border: 18px solid var(--charcoal);
-  overflow: hidden;
+  border: 14px solid var(--charcoal);
 }
 
 .art-note {
@@ -464,8 +459,6 @@ p {
   color: rgba(255, 250, 243, 0.68);
 }
 
-/* Scene 6 */
-
 /* Scene 6 — Luxembourg Unfolds */
 
 .city {
@@ -475,59 +468,35 @@ p {
 
 .city-intro {
   max-width: 1080px;
-  margin-bottom: 6vw;
-}
-
-.city-intro span {
-  display: block;
-  margin-bottom: 2.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.32em;
-  color: var(--gold);
+  margin-bottom: 2rem;
 }
 
 .city-intro h2 {
   max-width: 1080px;
   font-size: clamp(2.8rem, 5.8vw, 6rem);
-  line-height: 0.94;
+  line-height: 0.96;
   letter-spacing: -0.04em;
 }
 
-/* =======================================================
-   Full Bleed Panorama
-======================================================= */
-
-.full-bleed{
-
-    width:min(96vw;1800px);
-
-    margin-left:auto;
-
-    margin-top:6rem;
-
-    margin-bottom:6rem;
-
+.full-bleed {
+  width: min(96vw, 1800px);
+  margin-left: calc(50% - min(48vw, 900px));
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
-.city-photo{
-
-    overflow:hidden;
-
-    border-radius:42px;
-
-    box-shadow:
-    0 40px 120px rgba(0,0,0,.12);
-
+.city-photo {
+  overflow: hidden;
+  border-radius: 42px;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, .12);
 }
 
-.city-photo img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
+.city-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0.96) contrast(1.04);
 }
 
 .walking-list {
@@ -536,10 +505,11 @@ p {
 
 .walking-list article {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 160px 1fr minmax(220px, 360px);
   gap: 3vw;
   padding: 2.2rem 0;
   border-bottom: 1px solid var(--stone);
+  align-items: baseline;
 }
 
 .walking-list span {
@@ -550,104 +520,107 @@ p {
 }
 
 .walking-list h3 {
-  font-size: clamp(2rem, 4vw, 4.4rem);
+  font-size: clamp(2rem, 3.8vw, 4rem);
   line-height: 1;
 }
 
-/* Scene 7 */
+.walking-list p {
+  margin: 0;
+}
 
-.rooms {
+/* Scene 7 — Stay Beautifully */
+
+.stay {
   background: var(--ivory);
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 0.82fr 1.18fr;
   gap: 7vw;
-  align-items: end;
+  align-items: center;
 }
 
-.room-visual {
-  height: 78vh;
+.stay-copy {
+  max-width: 520px;
 }
 
-.room-text {
-  padding-bottom: 5vh;
-}
-
-.room-text h2 {
-  font-size: clamp(3rem, 6vw, 6rem);
+.stay-copy h2 {
+  font-size: clamp(3rem, 5.8vw, 6.6rem);
+  letter-spacing: -0.04em;
   margin-bottom: 2rem;
 }
 
-.room-text a {
-  display: inline-block;
-  margin-top: 1.5rem;
-  color: var(--charcoal);
-  text-decoration: none;
-  border-bottom: 1px solid var(--charcoal);
-  padding-bottom: 0.35rem;
+.stay-image {
+  height: 82vh;
 }
 
-/* Scene 8 */
+/* Scene 8 — Morning Ritual */
 
 .morning {
   background: var(--warm-white);
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 6vw;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 7vw;
   align-items: center;
-}
-
-.morning-text h2 {
-  font-size: clamp(3.4rem, 7vw, 8rem);
 }
 
 .morning-image {
   height: 78vh;
 }
 
-/* Scene 9 */
+.morning-copy {
+  max-width: 560px;
+}
+
+.morning-copy h2 {
+  font-size: clamp(3.4rem, 6.4vw, 7rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+}
+
+/* Scene 9 — City Guide */
 
 .guide {
   background: var(--ivory);
 }
 
 .guide-heading {
-  max-width: 900px;
+  max-width: 980px;
   margin-bottom: 6vw;
 }
 
-.guide-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.guide-heading h2 {
+  font-size: clamp(3rem, 6vw, 7rem);
+  letter-spacing: -0.04em;
+}
+
+.guide-journal {
   border-top: 1px solid var(--stone);
 }
 
-.guide-list article {
-  min-height: 280px;
-  padding: 2rem;
-  border-right: 1px solid var(--stone);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.guide-journal article {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 4vw;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--stone);
 }
 
-.guide-list article:last-child {
-  border-right: none;
-}
-
-.guide-list span {
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+.guide-journal span {
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
-.guide-list h3 {
-  font-size: clamp(2rem, 3vw, 3.2rem);
+.guide-journal h3 {
+  max-width: 920px;
+  font-size: clamp(2rem, 4.2vw, 4.6rem);
+  line-height: 1;
 }
 
-/* Scene 10 */
+/* Scene 10 — Guest Impression */
 
 .guest-story {
+  min-height: 90vh;
   background: var(--charcoal);
   color: var(--warm-white);
   display: grid;
@@ -663,17 +636,23 @@ p {
   line-height: 0.98;
 }
 
-/* Scene 11 */
+/* Scene 11 — Booking */
 
 .booking {
+  min-height: 95vh;
   background: var(--warm-white);
-  text-align: center;
   display: grid;
   place-items: center;
+  text-align: center;
+}
+
+.booking-inner {
+  max-width: 920px;
 }
 
 .booking h2 {
-  max-width: 900px;
+  font-size: clamp(3rem, 6vw, 7rem);
+  letter-spacing: -0.04em;
 }
 
 .booking p {
@@ -684,28 +663,36 @@ p {
 .primary-button {
   display: inline-block;
   margin-top: 1.5rem;
-  padding: 1rem 1.6rem;
+  padding: 1rem 1.7rem;
   background: var(--charcoal);
   color: var(--warm-white);
   text-decoration: none;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-size: 0.76rem;
+  border-radius: 999px;
 }
 
-/* Scene 12 */
+/* Scene 12 — Farewell */
 
 .ending {
+  min-height: 100vh;
   background:
-    linear-gradient(rgba(30,28,25,0.35), rgba(30,28,25,0.8)),
+    linear-gradient(rgba(30,28,25,0.24), rgba(30,28,25,0.88)),
     var(--charcoal);
   color: var(--warm-white);
   display: flex;
   align-items: flex-end;
 }
 
+.ending-inner {
+  width: 100%;
+}
+
 .ending h2 {
   max-width: 1000px;
+  font-size: clamp(3.4rem, 7vw, 8rem);
+  letter-spacing: -0.04em;
 }
 
 .footer-details {
@@ -718,60 +705,39 @@ p {
   color: var(--stone);
 }
 
+.footer-bottom {
+  margin-top: 5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 250, 243, 0.16);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  color: rgba(255, 250, 243, 0.55);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* Animation */
 
 @keyframes arrivalWord {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(20px);
-  }
-
-  15% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-
-  38% {
-    opacity: 1;
-  }
-
-  48% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  38% { opacity: 1; }
+  48% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes arrivalUnion {
-  0%,
-  42% {
-    opacity: 0;
-    transform: translateX(-50%) scale(0.96);
-  }
-
-  55% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-
-  68% {
-    opacity: 1;
-  }
-
-  78% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
+  0%, 42% { opacity: 0; transform: translateX(-50%) scale(0.96); }
+  55% { opacity: 1; transform: translateX(-50%) scale(1); }
+  68% { opacity: 1; }
+  78% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes arrivalFinal {
-  0%,
-  62% {
+  0%, 62% {
     opacity: 0;
     filter: blur(18px);
     transform: translateX(-50%) translateY(34px) scale(0.94);
@@ -783,8 +749,7 @@ p {
     filter: blur(8px);
   }
 
-  92%,
-  100% {
+  92%, 100% {
     opacity: 1;
     filter: blur(0);
     transform: translateX(-50%) translateY(0) scale(1);
@@ -793,8 +758,7 @@ p {
 }
 
 @keyframes arrivalScroll {
-  0%,
-  86% {
+  0%, 86% {
     opacity: 0;
     transform: translateX(-50%) translateY(-8px);
   }
@@ -813,61 +777,6 @@ p {
     min-height: auto;
   }
 
-  .city {
-  padding: 6rem 1.4rem;
-}
-
-.city-intro h2 {
-  font-size: clamp(2.7rem, 12vw, 4.8rem);
-}
-
-.city-photo {
-  width: 100%;
-  aspect-ratio: 1828 / 860;
-  border-radius: 24px;
-  margin: 3rem auto 4rem;
-}
-
-.walking-list article {
-  grid-template-columns: 1fr;
-  gap: 0.8rem;
-  padding: 1.8rem 0;
-}
-  
-  .art {
-  min-height: auto;
-  padding: 6rem 1.4rem;
-}
-
-.art-intro h2 {
-  font-size: clamp(2.8rem, 12vw, 4.8rem);
-}
-
-.art-stage {
-  min-height: auto;
-}
-
-.art-image-main {
-  width: 100%;
-  height: 58vh;
-}
-
-.art-image-floating {
-  position: relative;
-  right: auto;
-  top: auto;
-  width: 74%;
-  height: 36vh;
-  margin: 1rem 0 3rem auto;
-  border-width: 8px;
-}
-
-.art-note {
-  position: relative;
-  right: auto;
-  bottom: auto;
-  max-width: 100%;
-}
   .arrival,
   .hero-reveal,
   .silence,
@@ -907,7 +816,6 @@ p {
 
   .hero-title {
     padding: 0 1.4rem 12vh;
-    justify-content: flex-end;
   }
 
   .hero-title h2 {
@@ -924,46 +832,100 @@ p {
   }
 
   .story,
-  .rooms,
+  .stay,
   .morning {
     grid-template-columns: 1fr;
   }
 
   .story-image,
-  .room-visual,
+  .stay-image,
   .morning-image {
     height: 60vh;
+    border-radius: 28px;
   }
 
-  .story-text h2 {
+  .story-text h2,
+  .stay-copy h2,
+  .morning-copy h2,
+  .guide-heading h2,
+  .booking h2 {
     font-size: clamp(2.7rem, 12vw, 4.8rem);
   }
 
-  .art-large {
+  .art {
+    min-height: auto;
+    padding: 6rem 1.4rem;
+  }
+
+  .art-intro h2 {
+    font-size: clamp(2.8rem, 12vw, 4.8rem);
+  }
+
+  .art-stage {
+    min-height: auto;
+  }
+
+  .art-image-main {
     width: 100%;
     height: 58vh;
+    border-radius: 28px;
   }
 
-  .art-small {
+  .art-image-floating {
     position: relative;
-    width: 72%;
+    right: auto;
+    top: auto;
+    width: 74%;
     height: 36vh;
-    margin-left: auto;
-    margin-top: 1rem;
+    margin: 1rem 0 3rem auto;
+    border-width: 8px;
+    border-radius: 24px;
+  }
+
+  .art-note {
+    position: relative;
+    right: auto;
     bottom: auto;
-    border-width: 10px;
+    max-width: 100%;
   }
 
-  .guide-list {
+  .city {
+    padding: 6rem 1.4rem;
+  }
+
+  .city-intro h2 {
+    font-size: clamp(2.7rem, 12vw, 4.8rem);
+  }
+
+  .full-bleed {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .city-photo {
+    border-radius: 24px;
+  }
+
+  .walking-list article {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.8rem 0;
   }
 
-  .guide-list article {
-    border-right: none;
-    border-bottom: 1px solid var(--stone);
+  .guide-journal article {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
   }
 
-  .footer-details {
+  .guide-journal h3 {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  .footer-details,
+  .footer-bottom {
     flex-direction: column;
     gap: 1rem;
   }
