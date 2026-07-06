@@ -319,19 +319,36 @@ p {
 
 /* Scene 3 */
 
+/* Scene 3 — Silence */
+
 .silence {
-  min-height: 80vh;
+  min-height: 100vh;
+  background: var(--warm-white);
+  color: var(--charcoal);
   display: grid;
   place-items: center;
+  padding: 8vw;
+}
+
+.silence-inner {
+  max-width: 980px;
   text-align: center;
-  background: var(--warm-white);
+}
+
+.silence-inner span {
+  display: block;
+  margin-bottom: 3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  color: var(--gold);
 }
 
 .silence p {
-  max-width: 900px;
+  margin: 0;
   font-family: var(--serif);
-  font-size: clamp(3rem, 7vw, 7rem);
-  line-height: 1;
+  font-size: clamp(3rem, 7vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
   color: var(--charcoal);
 }
 
