@@ -840,88 +840,88 @@ p {
 
   /* v0.4.1 hotfix — Scene 5, 6, 7 */
 
-/* Scene 5 shorter */
-.art {
-  min-height: auto !important;
-  padding: 7rem 8vw 8rem !important;
-}
+  /* Scene 5 shorter */
+  .art {
+    min-height: auto !important;
+    padding: 7rem 8vw 8rem !important;
+  }
 
-.art-stage {
-  min-height: 68vh !important;
-}
+  .art-stage {
+    min-height: 68vh !important;
+  }
 
-.art-image-main {
-  height: 58vh !important;
-}
+  .art-image-main {
+    height: 58vh !important;
+  }
 
-.art-image-floating {
-  top: 14vh !important;
-  height: 38vh !important;
-}
+  .art-image-floating {
+    top: 14vh !important;
+    height: 38vh !important;
+  }
 
-/* Scene 6 true full-bleed panorama */
-.city {
-  min-height: auto !important;
-  padding: 7rem 0 4rem !important;
-}
+  /* Scene 6 true full-bleed panorama */
+  .city {
+    min-height: auto !important;
+    padding: 7rem 0 4rem !important;
+  }
 
-.city-intro {
-  padding: 0 8vw !important;
-  margin-bottom: 3rem !important;
-}
+  .city-intro {
+    padding: 0 8vw !important;
+    margin-bottom: 3rem !important;
+  }
 
-.city-photo.full-bleed {
-  width: 100vw !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  margin-top: 4rem !important;
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
+  .city-photo.full-bleed {
+    width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 4rem !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
 
-.city-photo.full-bleed img {
-  width: 100% !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-}
+  .city-photo.full-bleed img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
 
-/* Scene 7 spacing + cards */
-.destinations {
-  min-height: auto !important;
-  padding: 7rem 8vw 8rem !important;
-}
+  /* Scene 7 spacing + cards */
+  .destinations {
+    min-height: auto !important;
+    padding: 7rem 8vw 8rem !important;
+  }
 
-.destinations-heading {
-  margin-bottom: 4rem !important;
-}
+  .destinations-heading {
+    margin-bottom: 4rem !important;
+  }
 
-.destinations-heading h2 {
-  font-size: clamp(2.8rem, 5.4vw, 6rem) !important;
-}
+  .destinations-heading h2 {
+    font-size: clamp(2.8rem, 5.4vw, 6rem) !important;
+  }
 
-.destination-grid {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 2rem !important;
-}
+  .destination-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2rem !important;
+  }
 
-.destination-grid article {
-  min-width: 0 !important;
-}
+  .destination-grid article {
+    min-width: 0 !important;
+  }
 
-.destination-grid article img {
-  width: 100% !important;
-  height: 300px !important;
-  object-fit: cover !important;
-  border-radius: 32px !important;
-  display: block !important;
-  margin-bottom: 1.5rem !important;
-}
+  .destination-grid article img {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    border-radius: 32px !important;
+    display: block !important;
+    margin-bottom: 1.5rem !important;
+  }
 
-/* mobile */
-@media (max-width: 900px) {
+  /* mobile */
+  @media (max-width: 900px) {
   .art,
   .city,
   .destinations {
