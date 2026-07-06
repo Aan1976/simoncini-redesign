@@ -1,9 +1,25 @@
-const nav = document.querySelector(".floating-nav");
+// =====================================================
+// Hotel Simoncini
+// AnDevLab
+// Version 0.1
+// =====================================================
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight * 0.8) {
-    nav.classList.add("visible");
+const navbar = document.querySelector(".floating-nav");
+
+function updateNavbar() {
+  if (!navbar) return;
+
+  const trigger = window.innerHeight * 0.9;
+
+  if (window.scrollY > trigger) {
+    navbar.classList.add("visible");
   } else {
-    nav.classList.remove("visible");
+    navbar.classList.remove("visible");
   }
+}
+
+window.addEventListener("scroll", updateNavbar);
+
+window.addEventListener("load", () => {
+  updateNavbar();
 });
