@@ -803,9 +803,10 @@ p {
 }
 
 .city-photo {
-  height: 52vh;
-  border-radius: 28px;
-  margin-bottom: 4rem;
+  width: 100%;
+  aspect-ratio: 1828 / 860;
+  border-radius: 24px;
+  margin: 3rem auto 4rem;
 }
 
 .walking-list article {
