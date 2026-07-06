@@ -71,31 +71,121 @@ p {
   color: var(--muted);
 }
 
-/* Scene 1 */
+/* Scene 1 — Arrival */
 
 .arrival {
-  background: var(--charcoal);
-  color: var(--warm-white);
+  min-height: 100vh;
+  background: #050505;
+  color: #f5efe6;
   display: grid;
   place-items: center;
+  overflow: hidden;
+}
+
+.arrival-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.arrival-word,
+.arrival-union,
+.arrival-final,
+.arrival-scroll {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrival-word {
+  top: 43%;
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 8.5rem);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: arrivalWord 4.8s ease forwards;
+}
+
+.arrival-word.hotel {
+  left: 33%;
+}
+
+.arrival-word.gallery {
+  left: 67%;
+  animation-delay: 0.35s;
+}
+
+.arrival-union {
+  top: 43%;
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 7vw, 7rem);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  white-space: nowrap;
+  animation: arrivalUnion 4.8s ease forwards;
+}
+
+.arrival-final {
+  top: 38%;
   text-align: center;
+  opacity: 0;
+  animation: arrivalFinal 4.8s ease forwards;
 }
 
-.arrival-inner {
-  animation: fadeUp 1.4s ease both;
+.arrival-final h1 {
+  font-family: var(--serif);
+  font-size: clamp(4rem, 10vw, 10rem);
+  letter-spacing: 0.18em;
+  margin: 0;
 }
 
-.arrival h1 {
-  font-size: clamp(4rem, 14vw, 14rem);
-  letter-spacing: 0.08em;
-}
-
-.arrival .subtitle {
-  margin-top: 1rem;
-  color: var(--stone);
-  font-size: 0.95rem;
-  letter-spacing: 0.34em;
+.arrival-final p {
+  margin: 1.4rem 0 0.7rem;
+  color: #f5efe6;
+  font-size: 0.85rem;
+  letter-spacing: 0.36em;
   text-transform: uppercase;
+}
+
+.arrival-final span {
+  color: #b99a55;
+  font-size: 0.72rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+}
+
+.arrival-scroll {
+  bottom: 8vh;
+  color: #b99a55;
+  font-size: 2rem;
+  opacity: 0;
+  animation: arrivalScroll 4.8s ease forwards;
+}
+
+@keyframes arrivalWord {
+  0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  38% { opacity: 1; }
+  48% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes arrivalUnion {
+  0%, 42% { opacity: 0; transform: translateX(-50%) scale(0.96); }
+  55% { opacity: 1; transform: translateX(-50%) scale(1); }
+  68% { opacity: 1; }
+  78% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes arrivalFinal {
+  0%, 72% { opacity: 0; transform: translateX(-50%) translateY(18px); }
+  88%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes arrivalScroll {
+  0%, 86% { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 /* Scene 2 */
