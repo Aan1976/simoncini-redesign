@@ -499,9 +499,9 @@ p {
 
 .full-bleed{
 
-    width:100vw;
+    width:min(96vw;1800px);
 
-    margin-left:calc(50% - 50vw);
+    margin-left:auto;
 
     margin-top:6rem;
 
