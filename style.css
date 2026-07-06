@@ -788,6 +788,26 @@ p {
     min-height: auto;
   }
 
+  .city {
+  padding: 6rem 1.4rem;
+}
+
+.city-intro h2 {
+  font-size: clamp(2.7rem, 12vw, 4.8rem);
+}
+
+.city-photo {
+  height: 52vh;
+  border-radius: 28px;
+  margin-bottom: 4rem;
+}
+
+.walking-list article {
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  padding: 1.8rem 0;
+}
+  
   .art {
   min-height: auto;
   padding: 6rem 1.4rem;
