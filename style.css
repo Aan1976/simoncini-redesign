@@ -493,22 +493,41 @@ p {
   letter-spacing: -0.04em;
 }
 
-.city-photo {
-  width: 100%;
-  aspect-ratio: 1828 / 860;
-  border-radius: 36px;
-  overflow: hidden;
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.12);
-  margin: 5rem auto 6rem;
+/* =======================================================
+   Full Bleed Panorama
+======================================================= */
+
+.full-bleed{
+
+    width:100vw;
+
+    margin-left:calc(50% - 50vw);
+
+    margin-top:6rem;
+
+    margin-bottom:6rem;
+
 }
 
-.city-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  filter: brightness(0.96) contrast(1.04);
+.city-photo{
+
+    overflow:hidden;
+
+    border-radius:42px;
+
+    box-shadow:
+    0 40px 120px rgba(0,0,0,.12);
+
+}
+
+.city-photo img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
 }
 
 .walking-list {
