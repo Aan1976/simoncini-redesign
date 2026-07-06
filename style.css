@@ -488,13 +488,13 @@ p {
 
 .city-intro h2 {
   max-width: 1080px;
-  font-size: clamp(3.4rem, 7vw, 8rem);
+  font-size: clamp(2.8rem, 5.8vw, 6rem);
   line-height: 0.94;
   letter-spacing: -0.04em;
 }
 
 .city-photo {
-  height: 76vh;
+  height: 84vh;
   border-radius: 36px;
   overflow: hidden;
   box-shadow: 0 34px 90px rgba(0, 0, 0, 0.12);
