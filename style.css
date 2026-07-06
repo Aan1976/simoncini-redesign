@@ -39,6 +39,38 @@ img {
   display: block;
 }
 
+/* Premium image treatment */
+
+.story-image,
+.room-visual,
+.art-image-main,
+.art-image-floating,
+.morning-image {
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.10);
+}
+
+.art-image-floating {
+  border: 14px solid var(--charcoal);
+}
+
+.story-image img,
+.room-visual img,
+.art-image-main img,
+.art-image-floating img,
+.morning-image img {
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.story-image:hover img,
+.room-visual:hover img,
+.art-image-main:hover img,
+.art-image-floating:hover img,
+.morning-image:hover img {
+  transform: scale(1.025);
+}
+
 /* Global */
 
 .scene {
@@ -729,7 +761,7 @@ p {
   width: 74%;
   height: 36vh;
   margin: 1rem 0 3rem auto;
-  border-width: 10px;
+  border-width: 8px;
 }
 
 .art-note {
