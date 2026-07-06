@@ -138,6 +138,7 @@ p {
   font-size: clamp(4rem, 10vw, 10rem);
   letter-spacing: 0.18em;
   margin: 0;
+  text-shadow: 0 0 42px rgba(245, 239, 230, 0.18);
 }
 
 .arrival-final p {
