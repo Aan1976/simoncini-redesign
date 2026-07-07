@@ -1225,3 +1225,37 @@ p {
   font-size: 0.95rem !important;
   line-height: 1.55 !important;
 }
+
+/* Final hover polish */
+
+.destination-grid article,
+.text-link,
+.primary-button,
+.floating-nav a {
+  transition: all 0.35s ease;
+}
+
+.destination-grid article:hover img {
+  transform: scale(1.035);
+}
+
+.destination-grid article:hover h3 {
+  transform: translateY(-4px);
+}
+
+.destination-grid article h3 {
+  transition: transform 0.35s ease;
+}
+
+.text-link:hover {
+  color: var(--gold);
+}
+
+.floating-nav a:hover {
+  color: var(--gold);
+}
+
+.primary-button:hover {
+  background: var(--gold);
+  color: var(--charcoal);
+}
