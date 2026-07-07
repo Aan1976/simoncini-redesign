@@ -941,3 +941,179 @@ p {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* =======================================================
+   Simoncini Final Responsive + Layout Pass
+======================================================= */
+
+.art {
+  min-height: auto !important;
+  padding: 7rem 8vw 8rem !important;
+}
+
+.art-stage {
+  min-height: 68vh !important;
+}
+
+.art-image-main {
+  height: 58vh !important;
+}
+
+.art-image-floating {
+  top: 14vh !important;
+  height: 38vh !important;
+}
+
+.city {
+  min-height: auto !important;
+  padding: 7rem 0 4rem !important;
+}
+
+.city-intro {
+  padding: 0 8vw !important;
+  margin-bottom: 3rem !important;
+}
+
+.city-photo.full-bleed {
+  width: 100vw !important;
+  margin-left: 0 !important;
+  margin-top: 4rem !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.city-photo.full-bleed img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.destinations {
+  min-height: auto !important;
+  padding: 7rem 8vw 8rem !important;
+}
+
+.destination-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
+}
+
+.destination-grid article img {
+  height: 300px !important;
+  border-radius: 32px !important;
+}
+
+@media (max-width: 1100px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .scene {
+    padding: 5rem 1.25rem !important;
+  }
+
+  .arrival,
+  .hero-reveal,
+  .silence,
+  .guest-story,
+  .booking,
+  .ending {
+    min-height: 100vh !important;
+  }
+
+  .floating-nav {
+    width: calc(100% - 24px) !important;
+    padding: 12px 16px !important;
+  }
+
+  .floating-nav nav {
+    display: none !important;
+  }
+
+  .hero-title {
+    padding: 0 1.25rem 12vh !important;
+  }
+
+  .hero-title h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem) !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .story,
+  .stay,
+  .morning {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .story-image,
+  .stay-image,
+  .morning-image {
+    height: 56vh !important;
+    border-radius: 28px !important;
+  }
+
+  .art {
+    padding: 5rem 1.25rem !important;
+  }
+
+  .art-image-main {
+    width: 100% !important;
+    height: 54vh !important;
+    border-radius: 28px !important;
+  }
+
+  .art-image-floating {
+    position: relative !important;
+    width: 74% !important;
+    height: 34vh !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 1rem 0 3rem auto !important;
+    border-width: 8px !important;
+    border-radius: 24px !important;
+  }
+
+  .art-note {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    max-width: 100% !important;
+  }
+
+  .city {
+    padding: 5rem 0 3rem !important;
+  }
+
+  .city-intro {
+    padding: 0 1.25rem !important;
+  }
+
+  .city-photo.full-bleed {
+    width: 100vw !important;
+    margin-top: 3rem !important;
+  }
+
+  .destinations {
+    padding: 5rem 1.25rem !important;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .destination-grid article img {
+    height: 46vh !important;
+    border-radius: 28px !important;
+  }
+
+  .footer-details,
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}
