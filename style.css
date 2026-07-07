@@ -1117,3 +1117,39 @@ p {
     gap: 1rem !important;
   }
 }
+
+  /* Emergency layout fix v0.4.2 */
+
+.art.scene,
+.city.scene,
+.destinations.scene {
+  min-height: 0 !important;
+}
+
+.art {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.art-stage {
+  min-height: 0 !important;
+}
+
+.city {
+  padding-top: 5rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.destinations {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.city-photo.full-bleed {
+  display: block !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  border-radius: 0 !important;
+}
