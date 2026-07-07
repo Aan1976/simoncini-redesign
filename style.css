@@ -1153,3 +1153,75 @@ p {
   margin-right: calc(50% - 50vw) !important;
   border-radius: 0 !important;
 }
+
+/* Compact pass for Scene 5–7 */
+
+.art {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+.art-intro {
+  margin-bottom: 3rem !important;
+}
+
+.art-intro h2 {
+  font-size: clamp(2.6rem, 4.8vw, 5.2rem) !important;
+}
+
+.art-stage {
+  min-height: 0 !important;
+}
+
+.art-image-main {
+  height: 46vh !important;
+}
+
+.art-image-floating {
+  top: 10vh !important;
+  height: 32vh !important;
+}
+
+.art-note {
+  bottom: -1rem !important;
+}
+
+.city {
+  padding-top: 4.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+.city-intro h2 {
+  font-size: clamp(2.4rem, 4.8vw, 5rem) !important;
+}
+
+.city-photo.full-bleed {
+  margin-top: 3rem !important;
+  margin-bottom: 0 !important;
+}
+
+.destinations {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+.destinations-heading {
+  margin-bottom: 3rem !important;
+}
+
+.destinations-heading h2 {
+  font-size: clamp(2.5rem, 4.8vw, 5.2rem) !important;
+}
+
+.destination-grid article img {
+  height: 240px !important;
+}
+
+.destination-grid article h3 {
+  font-size: clamp(1.7rem, 2.2vw, 2.4rem) !important;
+}
+
+.destination-grid article p {
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+}
